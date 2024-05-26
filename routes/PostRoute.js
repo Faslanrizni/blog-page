@@ -1,0 +1,10 @@
+const express = require('express');
+const postController = require('../controller/PostController');
+const verifyUser = require('../middleware/AuthMiddleware');
+const router = express.Router();
+router.post('/create',verifyUser, postController.create);
+router.get('/find-by-id/:id',verifyUser, postController.findById);
+router.delete('/delete-by-id/:id',verifyUser, postController.deleteById);
+router.put('/update/:id',verifyUser, postController.update);
+router.get('/find-all',verifyUser, postController.findAll);
+module.exports=router;
