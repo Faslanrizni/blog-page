@@ -11,6 +11,7 @@
     "nodemon": "^3.1.0"
   },
   "scripts": {
+    "start": "pm2 start index.js",
     "test": "echo \"Error: no test specified\""
   }
 }
